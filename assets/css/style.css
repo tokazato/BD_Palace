@@ -107,6 +107,7 @@ nav > ul a {
   display: -ms-flexbox;
   display: flex;
   margin-right: 72px;
+  margin-bottom: 8px;
 }
 
 .liveContent span {
@@ -173,7 +174,7 @@ nav > ul a {
       -ms-flex-align: center;
           align-items: center;
   color: #fff;
-  padding: 20px 0px 20px 15px;
+  padding: 18px 0px 20px 15px;
 }
 
 .languageContent a:hover {

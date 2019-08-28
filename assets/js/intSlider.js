@@ -4,7 +4,7 @@ var aboutAsSlider = new Swiper('.aboutAsSlider', {
       prevEl: '.goLeft',
     },
     speed: 800,
-    spaceBetween: 100,
+    spaceBetween: 10,
     loops: true,
     on: {
         slideChange: function () {

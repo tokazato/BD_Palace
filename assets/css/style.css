@@ -149,6 +149,8 @@ nav > ul a:hover {
 }
 
 .burger {
+  position: relative;
+  z-index: 10;
   width: 44px;
   height: 44px;
   display: -webkit-box;
@@ -174,6 +176,8 @@ nav > ul a:hover {
   width: 16px;
   height: 2px;
   background: #fff;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 .change .burgerSpan1 {
@@ -272,6 +276,115 @@ nav > ul a:hover {
   font-size: 10px;
   padding-left: 6px;
   padding-right: 12px;
+}
+
+.openNavigationBox {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.9);
+  height: 100vh;
+  width: 100%;
+  z-index: 9;
+}
+
+.openNavigationBox .openNavigationContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.openNavigationBox .openNavLanguage {
+  margin-bottom: 60px;
+}
+
+.openNavigationBox .openNavLanguage a {
+  font-family: helvetica75;
+  margin: 0 10px;
+  padding: 14px 16px 16px 16px;
+  border-radius: 50%;
+  font-size: 13px;
+  color: #B89A49;
+  border: 1px solid #a7a7a7;
+}
+
+.openNavigationBox .navigationText li {
+  margin-bottom: 39px;
+}
+
+.openNavigationBox .navigationText a {
+  color: #fff;
+  font-family: mtavrulibold;
+  font-size: 16px;
+}
+
+.openNavigationBox .openNavSocialLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.openNavigationBox .openNavSocialLogo .navFb, .openNavigationBox .openNavSocialLogo .navYo {
+  margin: 0 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  width: 46px;
+  height: 46px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.openNavigationBox .openNavLive {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-top: 46px;
+}
+
+.openNavigationBox .openNavLive .openNavLiveContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 8px;
+}
+
+.openNavigationBox .openNavLive .openNavLiveContent span {
+  color: #B89A49;
+  margin-left: 9px;
+}
+
+.openNavigationBox .openNavLive p {
+  font-size: 15px;
+  font-family: mtavruli;
+}
+
+.openNavigationBox.active {
+  display: block;
 }
 
 .socialLogo {

@@ -41,6 +41,7 @@ $(document).ready(function(){
 
     $('.burger').on('click', function(){
         $(this).toggleClass("change");
+        $('.openNavigationBox').toggleClass('active');
     })
 
 

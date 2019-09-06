@@ -44,10 +44,11 @@ body.active {
     top: 0;
     z-index: -9;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
     }
     &::before {
         content: '';
@@ -60,41 +61,84 @@ body.active {
     }
 }
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 170px;
-}
-nav {
-    width: 658px;
-    margin-right: 302px;
+    .headerContainer {
+        margin: 0 auto;
+        max-width: 1640px;
+        height: 182px;
+        .headerContentBox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        .headerRightSide {
+            display: flex;
+            align-items: center;
+        }
+        .headerLeftSide {
+            display: flex;
+            align-items: center;
+        }
+    }
 }
 nav > ul {
     display: flex;
     justify-content: space-between;
     margin-left: 137px;
     width: 658px;
-    li {
+    a {
+        color: #fff;
         padding: 15px 24px;
         transition: 0.5s ease;
         border: 1px solid transparent;
+        font-size: 16px;
         &:hover {
             border: 1px solid #BEA95E;
             transition: 0.5s ease;
         }
     }
-    a {
-        color: #fff;
+}
+.liveBox {
+    p {
+        font-size: 15px;
     }
 }
 .liveContent  {
     display: flex;
-    margin-right: 142px;
+    margin-right: 142px; 
     margin-bottom: 8px;
     span {
         color: #B89A49;
         margin-left: 9px;
     }
+}
+.burger {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.burger span {
+    margin: 4px 0;
+    width: 16px;
+    height: 2px;
+    background: #fff;
+}
+.change .burgerSpan1  {
+    transform: rotate(-45deg) translate(0px, 0px) ;
+    margin: 0;
+    width: 22px;
+}
+.change .burgerSpan2  {
+    transform: rotate(45deg) translate(-1px, -1px);
+    margin: 0;
+    width: 22px;
 }
 .building {
     color: #fff;
@@ -102,16 +146,16 @@ nav > ul {
 }
 .languageBox {
     position: relative;
-    height: 60px;
-    width: 60px;
+    height: 56px;
+    width: 57px;
 }
 .languageContent {
     display: flex;
     flex-direction: column;
     position: absolute;
     overflow: hidden;
-    border: 2px solid #707070;
-    height: 60px;
+    border: 2px solid rgba(186, 186, 186, 0.7);
+    height: 57px;
     transition: 0.5s ease;
     &:hover {
         transition: 0.5s ease;
@@ -139,7 +183,9 @@ nav > ul {
         padding: 18px 0px 20px 15px; 
         &:hover {
             color: #1C1C1C;
-            background: #BABABA;
+            background: rgba(186, 186, 186, 0.8);
+            width: 100%;
+            height: 100%;
         }
     }
     .fas {
@@ -154,13 +200,14 @@ nav > ul {
     display: flex;
     flex-direction: column;
     position: fixed;
-    bottom: 0;
+    top: 50%;
+    transform: translate(0, -50%);
     a {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 140px;
-        width: 140px;
+        height: 100px;
+        width: 100px;
         background: #000000;
         opacity: 0.8;
         color: #B89A49;
@@ -190,6 +237,28 @@ nav > ul {
 .header {
     background: #282829;
     margin-bottom: 57px;
+}
+.languageVersion2 {
+    .active {
+      color: #fff;  
+    }
+    a {
+        color: #8C8C8C;
+    }
+    &:hover {
+        background: #fff;
+        border: 2px solid #282829;
+    }
+    &:hover .active {
+        color: #1C1C1C;
+    }
+     .fa-chevron-down {
+        color: #B89A49;
+    }
+    a:hover {
+        background: #282829;
+        color: #fff;
+    }
 }
 .aboutAsSection {
     display: flex;
@@ -492,20 +561,98 @@ footer {
     width: 100%;
     margin-top: 50px;
     span {
-        width: 12px;
-        height: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        color: #1C1C1C;
+        border: 1.5px solid #DEDEDE;
         border-radius: 50%;
-        background: #E3E3E3;
         text-align: center;
-        margin: 0 12px;
+        margin: 0 8px;
         transition: 0.3s ease;
         cursor: pointer;
         &:hover {
             background: #1C1C1C;
             transition: 0.3s ease;
+            color: #fff;
         }
     }
     .active {
         background: #1C1C1C;
+        color: #fff;
+    }
+}
+
+
+
+
+//    responsive 
+
+@media only screen and (min-width: 0){
+    .headerContentBox {
+        padding: 0 20px;
+    }
+    nav, .languageBox, .liveBox   {
+        display: none;
+    }
+    .burger {
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 375px){
+    
+}
+
+@media only screen and (min-width: 768px){
+    
+}
+
+@media only screen and (min-width: 1124px){
+    nav {
+        margin-right: 1%;
+        display: flex;
+        ul {
+            margin-left: 10px; 
+        } 
+    }
+    .burger {
+        display: none;
+    }
+    .languageBox, .liveBox {
+        display: block;
+    }
+    .liveContent  {
+        margin-right: 72px; 
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    nav {
+        margin-right: 8%;
+        ul {
+            margin-left: 57px; 
+            justify-content: space-evenly;
+        } 
+    }
+    .liveContent  {
+        margin-right: 82px; 
+    }
+}
+@media only screen and (min-width: 1420px){
+    .headerContentBox {
+        padding: 15px;
+    }
+    nav {
+        margin-right: 18%;
+        ul {
+            margin-left: 137px;
+            justify-content: space-between;
+        }
+    }
+    .liveContent  {
+        margin-right: 142px; 
     }
 }

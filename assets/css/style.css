@@ -46,12 +46,14 @@ body.active {
   top: 0;
   z-index: -9;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .mainImg img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .mainImg::before {
@@ -65,22 +67,42 @@ body.active {
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(54, 54, 54, 0) 30%);
 }
 
-header {
+header .headerContainer {
+  margin: 0 auto;
+  max-width: 1640px;
+  height: 182px;
+}
+
+header .headerContainer .headerContentBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 170px;
+  width: 100%;
+  height: 100%;
 }
 
-nav {
-  width: 658px;
-  margin-right: 302px;
+header .headerContainer .headerRightSide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .headerContainer .headerLeftSide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav > ul {
@@ -94,21 +116,23 @@ nav > ul {
   width: 658px;
 }
 
-nav > ul li {
+nav > ul a {
+  color: #fff;
   padding: 15px 24px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   border: 1px solid transparent;
+  font-size: 16px;
 }
 
-nav > ul li:hover {
+nav > ul a:hover {
   border: 1px solid #BEA95E;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 
-nav > ul a {
-  color: #fff;
+.liveBox p {
+  font-size: 15px;
 }
 
 .liveContent {
@@ -124,6 +148,48 @@ nav > ul a {
   margin-left: 9px;
 }
 
+.burger {
+  width: 44px;
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.burger span {
+  margin: 4px 0;
+  width: 16px;
+  height: 2px;
+  background: #fff;
+}
+
+.change .burgerSpan1 {
+  -webkit-transform: rotate(-45deg) translate(0px, 0px);
+          transform: rotate(-45deg) translate(0px, 0px);
+  margin: 0;
+  width: 22px;
+}
+
+.change .burgerSpan2 {
+  -webkit-transform: rotate(45deg) translate(-1px, -1px);
+          transform: rotate(45deg) translate(-1px, -1px);
+  margin: 0;
+  width: 22px;
+}
+
 .building {
   color: #fff;
   font-family: mtavruli;
@@ -131,8 +197,8 @@ nav > ul a {
 
 .languageBox {
   position: relative;
-  height: 60px;
-  width: 60px;
+  height: 56px;
+  width: 57px;
 }
 
 .languageContent {
@@ -145,8 +211,8 @@ nav > ul a {
           flex-direction: column;
   position: absolute;
   overflow: hidden;
-  border: 2px solid #707070;
-  height: 60px;
+  border: 2px solid rgba(186, 186, 186, 0.7);
+  height: 57px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
@@ -195,7 +261,9 @@ nav > ul a {
 
 .languageContent a:hover {
   color: #1C1C1C;
-  background: #BABABA;
+  background: rgba(186, 186, 186, 0.8);
+  width: 100%;
+  height: 100%;
 }
 
 .languageContent .fas {
@@ -215,7 +283,9 @@ nav > ul a {
       -ms-flex-direction: column;
           flex-direction: column;
   position: fixed;
-  bottom: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 
 .socialLogo a {
@@ -228,8 +298,8 @@ nav > ul a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 140px;
-  width: 140px;
+  height: 100px;
+  width: 100px;
   background: #000000;
   opacity: 0.8;
   color: #B89A49;
@@ -259,6 +329,32 @@ nav > ul a {
 .header {
   background: #282829;
   margin-bottom: 57px;
+}
+
+.languageVersion2 .active {
+  color: #fff;
+}
+
+.languageVersion2 a {
+  color: #8C8C8C;
+}
+
+.languageVersion2:hover {
+  background: #fff;
+  border: 2px solid #282829;
+}
+
+.languageVersion2:hover .active {
+  color: #1C1C1C;
+}
+
+.languageVersion2 .fa-chevron-down {
+  color: #B89A49;
+}
+
+.languageVersion2 a:hover {
+  background: #282829;
+  color: #fff;
 }
 
 .aboutAsSection {
@@ -711,12 +807,22 @@ footer .protectRight {
 }
 
 .pagenation span {
-  width: 12px;
-  height: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 48px;
+  height: 48px;
+  color: #1C1C1C;
+  border: 1.5px solid #DEDEDE;
   border-radius: 50%;
-  background: #E3E3E3;
   text-align: center;
-  margin: 0 12px;
+  margin: 0 8px;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   cursor: pointer;
@@ -726,9 +832,79 @@ footer .protectRight {
   background: #1C1C1C;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+  color: #fff;
 }
 
 .pagenation .active {
   background: #1C1C1C;
+  color: #fff;
+}
+
+@media only screen and (min-width: 0) {
+  .headerContentBox {
+    padding: 0 20px;
+  }
+  nav, .languageBox, .liveBox {
+    display: none;
+  }
+  .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1124px) {
+  nav {
+    margin-right: 1%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav ul {
+    margin-left: 10px;
+  }
+  .burger {
+    display: none;
+  }
+  .languageBox, .liveBox {
+    display: block;
+  }
+  .liveContent {
+    margin-right: 72px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  nav {
+    margin-right: 8%;
+  }
+  nav ul {
+    margin-left: 57px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .liveContent {
+    margin-right: 82px;
+  }
+}
+
+@media only screen and (min-width: 1420px) {
+  .headerContentBox {
+    padding: 15px;
+  }
+  nav {
+    margin-right: 18%;
+  }
+  nav ul {
+    margin-left: 137px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .liveContent {
+    margin-right: 142px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -38,4 +38,15 @@ $(document).ready(function(){
         event.stopImmediatePropagation();
     });
 
+
+    $('.burger').on('click', function(){
+        $(this).toggleClass("change");
+    })
+
+
+
+
+
+
 })
+

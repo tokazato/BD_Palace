@@ -346,31 +346,84 @@ nav > ul {
 }
 .aboutAsSection {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     flex-wrap: nowrap;
    @include container;
+   h1 {
+    font-size: 38px;
+    font-family: mtavrulibold;
+    color: #1C1C1C;
+    }
+   .pageTitle {
+    color: #9A803B;
+    font-size: 16px;
+    font-family: helvetica75;
+    margin-bottom: 30px;
+    }
+}
+.aboutAsBoxBackground {
+    top: 180px;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.1;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255,0.95) 90%);
+    }
+}
+.aboutAsSection1 {
+    @include container;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 24px 32px;
+}
+.aboutSection1Content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
    .aboutSectionLeft {
        width: 53%;
-       h1 {
-           font-size: 38px;
-           font-family: mtavrulibold;
-           color: #1C1C1C;
-       }
-       :nth-child(2){
-           color: #9A803B;
-           font-size: 16px;
-           font-family: helvetica75;
-           margin-bottom: 25px;
-       }
-       :nth-child(3){
+    .aboutSectionLeftTitle {
+        font-size: 16px;
+        color: rgba(28, 28, 28, 0.7);
+    }
+    p {
         color: #1C1C1C;
         font-size: 15px;
         font-family: helvetica55;
     }
+    h4 {
+        color: #9A803B;
+        font-size: 16px;
+        font-family: helvetica75;
+        margin-top: 31px;
+        margin-bottom: 12px;
+    }
    }
    .aboutSectionRight {
-       width: 45%;
+       width: 40%;
    }
+}
+.blackBall {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #1C1C1C;
+    border: 1px solid black;
+    margin-right: 10px;
+}
+.basicDirection {
+    display: flex;
+    flex-direction: column;
 }
 .imgSection {
     margin-top: 112px;
@@ -392,6 +445,10 @@ nav > ul {
         position: relative;
         width: 260px;
         height: 180px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
         &:hover::after {
             display: flex;
         }
@@ -684,14 +741,54 @@ footer {
     .burger {
         display: flex;
     }
+    .gridBox {
+        grid-template-columns: auto auto;
+         div {
+            width: 120px;
+            height: 80px;
+        }
+    }
+    .swiperContent{
+        width: 80%;
+    }
 }
 
-@media only screen and (min-width: 375px){
-    
+@media only screen and (min-width: 400px){
+    .gridBox {
+        grid-template-columns: auto auto;
+         div {
+            width: 160px;
+            height: 110px;
+        }
+    }
+}
+@media only screen and (min-width: 550px){
+    .gridBox {
+        grid-template-columns: auto auto;
+         div {
+            width: 220px;
+            height: 140px;
+        }
+    }
 }
 
-@media only screen and (min-width: 768px){
-    
+@media only screen and (min-width: 728px){
+    .gridBox {
+        grid-template-columns: auto auto;
+        div {
+            width: 260px;
+            height: 180px;
+        }
+    }
+}
+
+@media only screen and (min-width: 928px){
+    .gridBox {
+        grid-template-columns: auto auto auto;
+    }
+    .swiperContent{
+        width: 60%;
+    }
 }
 
 @media only screen and (min-width: 1124px){
@@ -724,6 +821,9 @@ footer {
     .liveContent  {
         margin-right: 82px; 
     }
+    .gridBox {
+        grid-template-columns: auto auto auto auto;
+    }
 }
 @media only screen and (min-width: 1420px){
     .headerContentBox {
@@ -739,4 +839,9 @@ footer {
     .liveContent  {
         margin-right: 142px; 
     }
+}
+@media only screen and (min-width: 1560px){
+    .gridBox {
+        grid-template-columns: auto auto auto auto auto;
+}
 }

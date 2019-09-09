@@ -661,6 +661,10 @@ nav > ul a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -692,6 +696,11 @@ nav > ul a:hover {
 
 .aboutSection1Content .aboutSectionRight {
   width: 40%;
+}
+
+.aboutSection1Content .aboutSectionRight img {
+  width: 100%;
+  height: 605px;
 }
 
 .blackBall {
@@ -1164,7 +1173,7 @@ footer .protectRight {
   .headerContentBox {
     padding: 0 20px;
   }
-  nav, .languageBox, .liveBox {
+  nav, .languageBox, .liveBox, .socialLogo, .aboutAsBoxBackground {
     display: none;
   }
   .burger {
@@ -1182,6 +1191,30 @@ footer .protectRight {
   }
   .swiperContent {
     width: 80%;
+  }
+  .aboutSection1Content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .aboutSection1Content .aboutSectionLeft {
+    width: 100%;
+  }
+  .aboutSection1Content .aboutSectionRight {
+    width: 100%;
+  }
+  .aboutSection1Content .aboutSectionRight img {
+    height: 202px;
+  }
+  .pageNameBox {
+    text-align: center;
+  }
+  .pageNameBox h1 {
+    font-size: 24px;
+  }
+  .pageNameBox .pageTitle {
+    font-size: 14px;
   }
 }
 
@@ -1205,6 +1238,9 @@ footer .protectRight {
     width: 220px;
     height: 140px;
   }
+  .aboutSection1Content .aboutSectionRight img {
+    height: 405px;
+  }
 }
 
 @media only screen and (min-width: 728px) {
@@ -1215,6 +1251,18 @@ footer .protectRight {
   .gridBox div {
     width: 260px;
     height: 180px;
+  }
+  .pageNameBox {
+    text-align: left;
+  }
+  .pageNameBox h1 {
+    font-size: 38px;
+  }
+  .pageNameBox .pageTitle {
+    font-size: 16px;
+  }
+  .aboutAsBoxBackground {
+    display: block;
   }
 }
 
@@ -1246,6 +1294,26 @@ footer .protectRight {
   }
   .liveContent {
     margin-right: 72px;
+  }
+  .aboutSection1Content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .aboutSection1Content .aboutSectionLeft {
+    width: 53%;
+  }
+  .aboutSection1Content .aboutSectionRight {
+    width: 40%;
+  }
+  .aboutSection1Content .aboutSectionRight img {
+    height: 605px;
+  }
+  .socialLogo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 

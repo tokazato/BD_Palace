@@ -475,6 +475,7 @@ nav > ul {
 }
 .aboutSection1Content {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     width: 100%;
    .aboutSectionLeft {
@@ -498,6 +499,10 @@ nav > ul {
    }
    .aboutSectionRight {
        width: 40%;
+       img {
+           width: 100%;
+           height: 605px;
+       }
    }
 }
 .blackBall {
@@ -823,7 +828,7 @@ footer {
     .headerContentBox {
         padding: 0 20px;
     }
-    nav, .languageBox, .liveBox   {
+    nav, .languageBox, .liveBox, .socialLogo , .aboutAsBoxBackground   {
         display: none;
     }
     .burger {
@@ -838,6 +843,27 @@ footer {
     }
     .swiperContent{
         width: 80%;
+    }
+    .aboutSection1Content {
+        flex-direction: column-reverse;
+        .aboutSectionLeft {
+            width: 100%;
+        }
+        .aboutSectionRight {
+            width: 100%;
+            img {
+                height: 202px;
+            }
+        }
+    }
+    .pageNameBox {
+        text-align: center;
+        h1 {
+            font-size: 24px;
+        }
+        .pageTitle {
+            font-size: 14px;
+        }
     }
 }
 
@@ -858,6 +884,15 @@ footer {
             height: 140px;
         }
     }
+    .aboutSection1Content {
+        .aboutSectionLeft {
+        }
+        .aboutSectionRight {
+            img {
+                height: 405px;
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 728px){
@@ -867,6 +902,18 @@ footer {
             width: 260px;
             height: 180px;
         }
+    }
+    .pageNameBox {
+        text-align: left;
+        h1 {
+        font-size: 38px;
+        }
+        .pageTitle {
+            font-size: 16px;
+        }
+    }
+    .aboutAsBoxBackground {
+        display: block;
     }
 }
 
@@ -895,6 +942,21 @@ footer {
     }
     .liveContent  {
         margin-right: 72px; 
+    }
+    .aboutSection1Content {
+        flex-direction: row;
+        .aboutSectionLeft {
+            width: 53%;
+        }
+        .aboutSectionRight {
+            width: 40%;
+            img {
+                height: 605px;
+            }
+        }
+    }
+    .socialLogo {
+        display: flex;
     }
 }
 

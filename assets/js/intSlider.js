@@ -5,6 +5,7 @@ var aboutAsSlider = new Swiper('.aboutAsSlider', {
     },
     speed: 800,
     spaceBetween: 10,
+    // width: 840,
     loops: true,
     on: {
         slideChange: function () {

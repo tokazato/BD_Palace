@@ -42,11 +42,17 @@ $(document).ready(function(){
     $('.burger').on('click', function(){
         $(this).toggleClass("change");
         $('.openNavigationBox').toggleClass('active');
+        $('.openNavLanguage').toggleClass('anim');
+        $('.odd').toggleClass('anim');
+        $('.even').toggleClass('anim');
+        $('.navFb').toggleClass('anim');
+        $('.navYo').toggleClass('anim');
+        $('.openNavLive').toggleClass('anim');
+        $('body').toggleClass('active');
     })
 
 
-
-
+   
 
 
 })

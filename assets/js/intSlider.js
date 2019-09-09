@@ -4,9 +4,9 @@ var aboutAsSlider = new Swiper('.aboutAsSlider', {
       prevEl: '.goLeft',
     },
     speed: 800,
-    spaceBetween: 10,
-    // width: 840,
+    spaceBetween: 20,
     loops: true,
+    slidesPerView: 1,
     on: {
         slideChange: function () {
           let fromTop = (56 * this.realIndex);

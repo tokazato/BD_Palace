@@ -597,9 +597,10 @@ nav > ul a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   padding: 0;
@@ -608,31 +609,109 @@ nav > ul a:hover {
   margin: 0 auto;
 }
 
-.aboutAsSection .aboutSectionLeft {
-  width: 53%;
-}
-
-.aboutAsSection .aboutSectionLeft h1 {
+.aboutAsSection h1 {
   font-size: 38px;
   font-family: mtavrulibold;
   color: #1C1C1C;
 }
 
-.aboutAsSection .aboutSectionLeft :nth-child(2) {
+.aboutAsSection .pageTitle {
   color: #9A803B;
   font-size: 16px;
   font-family: helvetica75;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
-.aboutAsSection .aboutSectionLeft :nth-child(3) {
+.aboutAsBoxBackground {
+  top: 180px;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.aboutAsBoxBackground::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(90%, rgba(255, 255, 255, 0.95)));
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.95) 90%);
+}
+
+.aboutAsSection1 {
+  padding: 0;
+  margin: 0;
+  width: 80%;
+  margin: 0 auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #fff;
+  padding: 24px 32px;
+}
+
+.aboutSection1Content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.aboutSection1Content .aboutSectionLeft {
+  width: 53%;
+}
+
+.aboutSection1Content .aboutSectionLeft .aboutSectionLeftTitle {
+  font-size: 16px;
+  color: rgba(28, 28, 28, 0.7);
+}
+
+.aboutSection1Content .aboutSectionLeft p {
   color: #1C1C1C;
   font-size: 15px;
   font-family: helvetica55;
 }
 
-.aboutAsSection .aboutSectionRight {
-  width: 45%;
+.aboutSection1Content .aboutSectionLeft h4 {
+  color: #9A803B;
+  font-size: 16px;
+  font-family: helvetica75;
+  margin-top: 31px;
+  margin-bottom: 12px;
+}
+
+.aboutSection1Content .aboutSectionRight {
+  width: 40%;
+}
+
+.blackBall {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #1C1C1C;
+  border: 1px solid black;
+  margin-right: 10px;
+}
+
+.basicDirection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .imgSection {
@@ -664,6 +743,11 @@ nav > ul a:hover {
   position: relative;
   width: 260px;
   height: 180px;
+}
+
+.gridBox div img {
+  width: 100%;
+  height: 100%;
 }
 
 .gridBox div:hover::after {
@@ -1088,6 +1172,60 @@ footer .protectRight {
     display: -ms-flexbox;
     display: flex;
   }
+  .gridBox {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  .gridBox div {
+    width: 120px;
+    height: 80px;
+  }
+  .swiperContent {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .gridBox {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  .gridBox div {
+    width: 160px;
+    height: 110px;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .gridBox {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  .gridBox div {
+    width: 220px;
+    height: 140px;
+  }
+}
+
+@media only screen and (min-width: 728px) {
+  .gridBox {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  .gridBox div {
+    width: 260px;
+    height: 180px;
+  }
+}
+
+@media only screen and (min-width: 928px) {
+  .gridBox {
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+  .swiperContent {
+    width: 60%;
+  }
 }
 
 @media only screen and (min-width: 1124px) {
@@ -1124,6 +1262,10 @@ footer .protectRight {
   .liveContent {
     margin-right: 82px;
   }
+  .gridBox {
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+  }
 }
 
 @media only screen and (min-width: 1420px) {
@@ -1141,6 +1283,13 @@ footer .protectRight {
   }
   .liveContent {
     margin-right: 142px;
+  }
+}
+
+@media only screen and (min-width: 1560px) {
+  .gridBox {
+    -ms-grid-columns: auto auto auto auto auto;
+        grid-template-columns: auto auto auto auto auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

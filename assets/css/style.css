@@ -62,7 +62,7 @@ body.active {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), color-stop(30%, rgba(54, 54, 54, 0)));
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(54, 54, 54, 0) 30%);
 }
@@ -279,14 +279,18 @@ nav > ul a:hover {
 }
 
 .openNavigationBox {
-  display: none;
   position: absolute;
   left: 0;
   top: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.8);
   height: 100vh;
   width: 100%;
   z-index: 9;
+  -webkit-transition: 0.9s ease;
+  transition: 0.9s ease;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .openNavigationBox .openNavigationContent {
@@ -307,8 +311,20 @@ nav > ul a:hover {
   height: 100%;
 }
 
+.openNavigationBox .openNavLanguage.anim {
+  top: 0px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  opacity: 1;
+}
+
 .openNavigationBox .openNavLanguage {
   margin-bottom: 60px;
+  position: relative;
+  top: -150px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  opacity: 0;
 }
 
 .openNavigationBox .openNavLanguage a {
@@ -317,11 +333,26 @@ nav > ul a:hover {
   padding: 14px 16px 16px 16px;
   border-radius: 50%;
   font-size: 13px;
-  color: #B89A49;
+  color: rgba(184, 154, 73, 0.4);
+  border: 1px solid rgba(167, 167, 167, 0.4);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.openNavigationBox .openNavLanguage a:hover {
+  color: #b89a49;
+  border: 1px solid #a7a7a7;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.openNavigationBox .openNavLanguage a.active {
+  color: #b89a49;
   border: 1px solid #a7a7a7;
 }
 
 .openNavigationBox .navigationText li {
+  position: relative;
   margin-bottom: 39px;
 }
 
@@ -329,6 +360,44 @@ nav > ul a:hover {
   color: #fff;
   font-family: mtavrulibold;
   font-size: 16px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.openNavigationBox .navigationText a:hover {
+  color: #b89a49;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.openNavigationBox .navigationText .odd {
+  position: relative;
+  right: 200px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+.openNavigationBox .navigationText .even {
+  position: relative;
+  left: 200px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+.openNavigationBox .navigationText .odd.anim {
+  right: 0px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  opacity: 1;
+}
+
+.openNavigationBox .navigationText .even.anim {
+  left: 0px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  opacity: 1;
 }
 
 .openNavigationBox .openNavSocialLogo {
@@ -348,11 +417,56 @@ nav > ul a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #fff;
+  color: #BEA95E;
   width: 46px;
   height: 46px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
+  position: relative;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.openNavigationBox .openNavSocialLogo .navFb:hover, .openNavigationBox .openNavSocialLogo .navYo:hover {
+  background: #BEA95E;
+  color: #1C1C1C;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.openNavigationBox .openNavSocialLogo .navFb {
+  right: 200px;
+  opacity: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.openNavigationBox .openNavSocialLogo .navYo {
+  left: 200px;
+  opacity: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.openNavigationBox .openNavSocialLogo .navFb.anim {
+  right: 0px;
+  opacity: 1;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.openNavigationBox .openNavSocialLogo .navYo.anim {
+  left: 0px;
+  opacity: 1;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.openNavigationBox .openNavLive.anim {
+  top: 0px;
+  opacity: 1;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .openNavigationBox .openNavLive {
@@ -360,6 +474,11 @@ nav > ul a:hover {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   margin-top: 46px;
+  position: relative;
+  top: 150px;
+  opacity: 1;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .openNavigationBox .openNavLive .openNavLiveContent {
@@ -384,7 +503,11 @@ nav > ul a:hover {
 }
 
 .openNavigationBox.active {
-  display: block;
+  -webkit-transition: 0.9s ease;
+  transition: 0.9s ease;
+  pointer-events: auto;
+  visibility: visible;
+  opacity: 1;
 }
 
 .socialLogo {
@@ -538,6 +661,10 @@ nav > ul a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -569,6 +696,11 @@ nav > ul a:hover {
 
 .aboutSection1Content .aboutSectionRight {
   width: 40%;
+}
+
+.aboutSection1Content .aboutSectionRight img {
+  width: 100%;
+  height: 605px;
 }
 
 .blackBall {
@@ -1041,7 +1173,7 @@ footer .protectRight {
   .headerContentBox {
     padding: 0 20px;
   }
-  nav, .languageBox, .liveBox {
+  nav, .languageBox, .liveBox, .socialLogo, .aboutAsBoxBackground {
     display: none;
   }
   .burger {
@@ -1059,6 +1191,30 @@ footer .protectRight {
   }
   .swiperContent {
     width: 80%;
+  }
+  .aboutSection1Content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .aboutSection1Content .aboutSectionLeft {
+    width: 100%;
+  }
+  .aboutSection1Content .aboutSectionRight {
+    width: 100%;
+  }
+  .aboutSection1Content .aboutSectionRight img {
+    height: 202px;
+  }
+  .pageNameBox {
+    text-align: center;
+  }
+  .pageNameBox h1 {
+    font-size: 24px;
+  }
+  .pageNameBox .pageTitle {
+    font-size: 14px;
   }
 }
 
@@ -1082,6 +1238,9 @@ footer .protectRight {
     width: 220px;
     height: 140px;
   }
+  .aboutSection1Content .aboutSectionRight img {
+    height: 405px;
+  }
 }
 
 @media only screen and (min-width: 728px) {
@@ -1092,6 +1251,18 @@ footer .protectRight {
   .gridBox div {
     width: 260px;
     height: 180px;
+  }
+  .pageNameBox {
+    text-align: left;
+  }
+  .pageNameBox h1 {
+    font-size: 38px;
+  }
+  .pageNameBox .pageTitle {
+    font-size: 16px;
+  }
+  .aboutAsBoxBackground {
+    display: block;
   }
 }
 
@@ -1123,6 +1294,26 @@ footer .protectRight {
   }
   .liveContent {
     margin-right: 72px;
+  }
+  .aboutSection1Content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .aboutSection1Content .aboutSectionLeft {
+    width: 53%;
+  }
+  .aboutSection1Content .aboutSectionRight {
+    width: 40%;
+  }
+  .aboutSection1Content .aboutSectionRight img {
+    height: 605px;
+  }
+  .socialLogo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 

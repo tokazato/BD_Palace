@@ -321,7 +321,7 @@ nav > ul a:hover {
 .openNavigationBox .openNavLanguage {
   margin-bottom: 60px;
   position: relative;
-  top: -150px;
+  top: -50px;
   -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
   opacity: 0;
@@ -372,7 +372,7 @@ nav > ul a:hover {
 
 .openNavigationBox .navigationText .odd {
   position: relative;
-  right: 200px;
+  right: 50px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   opacity: 0;
@@ -380,7 +380,7 @@ nav > ul a:hover {
 
 .openNavigationBox .navigationText .even {
   position: relative;
-  left: 200px;
+  left: 50px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   opacity: 0;
@@ -435,14 +435,14 @@ nav > ul a:hover {
 }
 
 .openNavigationBox .openNavSocialLogo .navFb {
-  right: 200px;
+  right: 50px;
   opacity: 0;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 
 .openNavigationBox .openNavSocialLogo .navYo {
-  left: 200px;
+  left: 50px;
   opacity: 0;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
@@ -475,7 +475,7 @@ nav > ul a:hover {
   border-radius: 10px;
   margin-top: 46px;
   position: relative;
-  top: 150px;
+  top: 50px;
   opacity: 1;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
@@ -553,13 +553,14 @@ nav > ul a:hover {
 .smartweblogo {
   position: absolute;
   right: 170px;
-  bottom: 20px;
+  bottom: 45px;
 }
 
 .messenger {
   position: fixed;
+  z-index: 3;
   right: 0;
-  bottom: 0;
+  bottom: 20px;
 }
 
 .header {
@@ -605,7 +606,7 @@ nav > ul a:hover {
       flex-wrap: nowrap;
   padding: 0;
   margin: 0;
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
 }
 
@@ -630,6 +631,10 @@ nav > ul a:hover {
   opacity: 0.1;
 }
 
+.aboutAsBoxBackground img {
+  width: 100%;
+}
+
 .aboutAsBoxBackground::before {
   content: '';
   position: absolute;
@@ -644,7 +649,7 @@ nav > ul a:hover {
 .aboutAsSection1 {
   padding: 0;
   margin: 0;
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
   width: 100%;
   display: -webkit-box;
@@ -743,7 +748,7 @@ nav > ul a:hover {
   grid-gap: 16px;
   padding: 0;
   margin: 0;
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
 }
 
@@ -806,7 +811,7 @@ nav > ul a:hover {
 .swiperContent {
   padding: 0;
   margin: 0;
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
   text-align: center;
   position: absolute;
@@ -913,14 +918,16 @@ nav > ul a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0;
   margin: 0;
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
 }
 
@@ -931,9 +938,10 @@ nav > ul a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 33%;
   height: 104px;
   border: 2px solid #E8E8E8;
+  width: 490px;
+  margin-right: 5px;
 }
 
 .contactInformation .emailBox .emailContent {
@@ -949,6 +957,10 @@ nav > ul a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -966,6 +978,7 @@ nav > ul a:hover {
 .contactInformation .emailBox .emailContent span {
   font-size: 18px;
   color: #9A803B;
+  margin-right: 38px;
 }
 
 .contactInformation .phoneBox {
@@ -976,13 +989,18 @@ nav > ul a:hover {
       -ms-flex-align: center;
           align-items: center;
   border: 2px solid #E8E8E8;
-  width: 60%;
+  height: 104px;
+  width: 789px;
 }
 
 .contactInformation .phoneBox i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -991,13 +1009,20 @@ nav > ul a:hover {
           align-items: center;
   color: #5AAC2F;
   height: 38px;
-  width: 38px;
+  width: 60px;
   border-radius: 50%;
   background: #EEF7E9;
   margin-right: 58px;
 }
 
 .contactInformation .phoneBox a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin: 0 36px 0 0;
   font-size: 18px;
   color: #9A803B;
@@ -1019,7 +1044,6 @@ nav > ul a:hover {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   border-bottom: 2px solid #E8E8E8;
-  width: 104px;
   color: #1C1C1C;
   font-size: 14px;
   font-family: mtavrulibold;
@@ -1029,15 +1053,23 @@ nav > ul a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0;
   margin: 0;
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
   margin-top: 65px;
   margin-bottom: 84px;
+}
+
+.mapSection div:nth-child(1) {
+  margin-right: 5px;
 }
 
 .mapSection h3 {
@@ -1054,6 +1086,12 @@ nav > ul a:hover {
   margin-bottom: 24px;
 }
 
+.mapSection iframe {
+  border-radius: 5px;
+  width: 600px;
+  height: 390px;
+}
+
 footer {
   background: #F4F4F4;
   height: 152px;
@@ -1062,7 +1100,7 @@ footer {
 footer .container {
   padding: 0;
   margin: 0;
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1083,7 +1121,6 @@ footer ul {
 }
 
 footer ul li {
-  padding: 0 42px;
   font-size: 15px;
   font-family: helvetica75;
 }
@@ -1216,6 +1253,83 @@ footer .protectRight {
   .pageNameBox .pageTitle {
     font-size: 14px;
   }
+  footer > .container > ul {
+    display: none;
+  }
+  footer > .container > .copyrightBox {
+    display: none;
+  }
+  .smartweblogo {
+    right: 160px;
+  }
+  .contactInformation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contactInformation .emailBox {
+    width: 265px;
+    margin-right: 0px;
+    margin-bottom: 16px;
+  }
+  .contactInformation .emailBox .emailContent i {
+    margin-right: 6px;
+  }
+  .contactInformation .emailBox .emailContent span {
+    font-size: 12px;
+    margin-right: 22px;
+  }
+  .contactInformation .phoneBox {
+    height: 123px;
+    width: 265px;
+    margin-right: 5px;
+    margin-bottom: 0px;
+  }
+  .contactInformation .phoneBox i {
+    margin-right: 14px;
+  }
+  .contactInformation .phoneBox a {
+    font-size: 14px;
+  }
+  .contactInformation .phoneBox .phoneNumbers {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .contactInformation .phoneBox .phoneNumberLine {
+    width: 120px;
+  }
+  .mapSection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mapSection iframe {
+    width: 100%;
+    height: auto;
+  }
+  .contactType {
+    right: 20px;
+    padding: 15px 0;
+    font-size: 12px;
+  }
 }
 
 @media only screen and (min-width: 400px) {
@@ -1226,6 +1340,34 @@ footer .protectRight {
   .gridBox div {
     width: 160px;
     height: 110px;
+  }
+  .contactInformation .emailBox {
+    height: 104px;
+    width: 327px;
+  }
+  .contactInformation .emailBox .emailContent i {
+    margin-right: 24px;
+  }
+  .contactInformation .emailBox .emailContent span {
+    font-size: 15px;
+    margin-right: 22px;
+  }
+  .contactInformation .phoneBox {
+    width: 327px;
+  }
+  .contactInformation .phoneBox i {
+    margin-right: 24px;
+  }
+  .contactInformation .phoneBox a {
+    font-size: 15px;
+  }
+  .contactInformation .phoneBox .phoneNumberLine {
+    width: 150px;
+  }
+  .contactType {
+    padding: 20px 0;
+    width: 104px;
+    font-size: 14px;
   }
 }
 
@@ -1240,6 +1382,47 @@ footer .protectRight {
   }
   .aboutSection1Content .aboutSectionRight img {
     height: 405px;
+  }
+  .contactInformation .emailBox {
+    width: 427px;
+  }
+  .contactInformation .emailBox .emailContent i {
+    margin-right: 58px;
+  }
+  .contactInformation .emailBox .emailContent span {
+    font-size: 18px;
+    margin-right: 38px;
+  }
+  .contactInformation .phoneBox {
+    height: 123px;
+    width: 427px;
+  }
+  .contactInformation .phoneBox i {
+    margin-right: 58px;
+  }
+  .contactInformation .phoneBox a {
+    font-size: 18px;
+  }
+  .contactInformation .phoneBox .phoneNumberLine {
+    width: 229px;
+    right: 30px;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .contactInformation .emailBox {
+    height: 104px;
+    width: 527px;
+    margin-right: 0px;
+    margin-bottom: 16px;
+  }
+  .contactInformation .phoneBox {
+    height: 123px;
+    width: 527px;
+  }
+  .contactInformation .phoneBox .phoneNumberLine {
+    width: 200px;
+    right: 28px;
   }
 }
 
@@ -1264,6 +1447,9 @@ footer .protectRight {
   .aboutAsBoxBackground {
     display: block;
   }
+  footer > .container > .copyrightBox {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 928px) {
@@ -1273,6 +1459,43 @@ footer .protectRight {
   }
   .swiperContent {
     width: 60%;
+  }
+  footer > .container > ul > li {
+    padding: 0 22px;
+  }
+  .mapSection {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .mapSection iframe {
+    width: 400px;
+    height: 390px;
+  }
+  .contactInformation .emailBox {
+    height: 104px;
+    width: 490px;
+  }
+  .contactInformation .phoneBox {
+    height: 104px;
+    width: 789px;
+  }
+  .contactInformation .phoneBox .phoneNumbers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contactInformation .phoneBox .phoneNumberLine {
+    width: 140px;
+    right: 20px;
   }
 }
 
@@ -1315,6 +1538,14 @@ footer .protectRight {
     display: -ms-flexbox;
     display: flex;
   }
+  footer > .container > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .smartweblogo {
+    right: 170px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1352,12 +1583,64 @@ footer .protectRight {
   .liveContent {
     margin-right: 142px;
   }
+  footer > .container > ul > li {
+    padding: 0 42px;
+  }
+  .contactInformation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contactInformation .emailBox {
+    height: 104px;
+    width: 490px;
+    margin-right: 5px;
+    margin-bottom: 0px;
+  }
+  .contactInformation .emailBox .emailContent i {
+    margin-right: 20px;
+  }
+  .contactInformation .emailBox .emailContent span {
+    font-size: 17px;
+  }
+  .contactInformation .phoneBox i {
+    margin-right: 20px;
+  }
+  .contactInformation .phoneBox a {
+    font-size: 15px;
+  }
+  .mapSection iframe {
+    width: 600px;
+    height: 390px;
+  }
 }
 
 @media only screen and (min-width: 1560px) {
   .gridBox {
     -ms-grid-columns: auto auto auto auto auto;
         grid-template-columns: auto auto auto auto auto;
+  }
+}
+
+@media only screen and (min-width: 1617px) {
+  .contactInformation .emailBox .emailContent i {
+    margin-right: 58px;
+  }
+  .contactInformation .emailBox .emailContent span {
+    font-size: 18px;
+  }
+  .contactInformation .phoneBox i {
+    margin-right: 58px;
+  }
+  .contactInformation .phoneBox a {
+    font-size: 18px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,7 @@
 @mixin container {
     padding: 0;
     margin: 0;
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
 }
 
@@ -229,7 +229,7 @@ nav > ul {
     .openNavLanguage {
         margin-bottom: 60px;
         position: relative;
-        top: -150px;
+        top: -50px;
         transition: 0.6s ease;
         opacity: 0;
         a {
@@ -269,13 +269,13 @@ nav > ul {
         }
         .odd{
             position: relative;
-            right: 200px;
+            right: 50px;
             transition: 0.5s ease;
             opacity: 0;
         }
         .even{
             position: relative;
-            left: 200px;
+            left: 50px;
             transition: 0.5s ease;
             opacity: 0;
         }
@@ -311,12 +311,12 @@ nav > ul {
             }
         }
         .navFb {
-            right: 200px;
+            right: 50px;
             opacity: 0;
             transition: 0.5s ease;
         } 
         .navYo {
-            left: 200px;
+            left: 50px;
             opacity: 0;
             transition: 0.5s ease;
         }
@@ -342,7 +342,7 @@ nav > ul {
         border-radius: 10px;
         margin-top: 46px;
         position: relative;
-        top: 150px;
+        top: 50px;
         opacity: 1;
         transition: 0.5s ease;
         .openNavLiveContent {
@@ -394,12 +394,13 @@ nav > ul {
 .smartweblogo {
     position: absolute;
     right: 170px;
-    bottom: 20px;
+    bottom: 45px;
 }
 .messenger {
     position: fixed;
+    z-index: 3;
     right: 0;
-    bottom: 0;
+    bottom: 20px;
 }
 
 
@@ -455,6 +456,9 @@ nav > ul {
     position: absolute;
     z-index: -1;
     opacity: 0.1;
+    img {
+        width: 100%;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -654,20 +658,22 @@ nav > ul {
 // ------------- Contact -----------
 .contactInformation {
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: row;
     justify-content: space-between;
     @include container;
     .emailBox {
         display: flex;
         align-items: center;
-        width: 33%;
         height: 104px;
         border: 2px solid #E8E8E8;
+        width: 490px;
+        margin-right: 5px;
         .emailContent {
             display: flex;
             align-items: center;
             i {
                 display: flex;
+                flex-direction: row;
                 justify-content: center;
                 align-items: center;
                 color: #FF1F64;
@@ -680,6 +686,7 @@ nav > ul {
             span {
                 font-size: 18px;
                 color: #9A803B;
+                margin-right: 38px;
             }
         }
     }
@@ -687,19 +694,23 @@ nav > ul {
         display: flex;
         align-items: center;
         border: 2px solid #E8E8E8;
-        width: 60%;
+        height: 104px;
+        width: 789px;
         i {
             display: flex;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
             color: #5AAC2F;
             height: 38px;
-            width: 38px;
+            width: 60px;
             border-radius: 50%;
             background: #EEF7E9;
             margin-right: 58px; 
         }
         a {
+            display: flex;
+            flex-direction: row;
             margin: 0 36px 0 0 ;
             font-size: 18px;
             color: #9A803B;
@@ -715,17 +726,20 @@ nav > ul {
     justify-content: center;
     transform: rotate(-90deg);
     border-bottom: 2px solid #E8E8E8;
-    width: 104px;
     color: #1C1C1C;
     font-size: 14px;
     font-family: mtavrulibold;
 }
 .mapSection {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     @include container;
     margin-top: 65px;
     margin-bottom: 84px;
+    div:nth-child(1) {
+        margin-right: 5px;
+    }
     h3 {
         font-size: 18px;
         font-family: helvetica75;
@@ -737,6 +751,11 @@ nav > ul {
         font-family: helvetica55;
         color: #1C1C1C;
         margin-bottom: 24px;
+    }
+    iframe {
+        border-radius: 5px;
+        width: 600px;
+        height: 390px;
     }
 }
 footer {
@@ -752,7 +771,7 @@ footer {
     ul {
         display: flex;
         li {
-            padding: 0 42px;
+            // padding: 0 42px;
             font-size: 15px;
             font-family: helvetica75;
         }
@@ -865,6 +884,69 @@ footer {
             font-size: 14px;
         }
     }
+    footer > .container >  ul {
+        display: none;
+    }
+    footer > .container > .copyrightBox {
+        display: none;
+    } 
+    .smartweblogo {
+        right: 160px;
+        // left: 30px;
+    }
+    .contactInformation {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .emailBox {
+            width: 265px;
+            margin-right: 0px;
+            margin-bottom: 16px;
+            .emailContent  {
+                i {
+                    margin-right: 6px;
+                }
+                span {
+                    font-size: 12px;
+                    margin-right: 22px;
+                }
+            }
+        }
+        .phoneBox {
+            height: 123px;
+            width: 265px;
+            margin-right: 5px;
+            margin-bottom: 0px;
+            i {
+                margin-right: 14px; 
+            }
+            a {
+                font-size: 14px;
+            }
+            .phoneNumbers {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+            .phoneNumberLine {
+                width: 120px;
+            }
+        }
+    }
+    .mapSection {
+        flex-direction: column;
+        iframe {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .contactType {
+        right: 20px;
+        padding: 15px 0;
+        font-size: 12px;
+    }
 }
 
 @media only screen and (min-width: 400px){
@@ -874,6 +956,38 @@ footer {
             width: 160px;
             height: 110px;
         }
+    }
+    .contactInformation {
+        .emailBox {
+            height: 104px;
+            width: 327px;
+            .emailContent  {
+                i {
+                    margin-right: 24px;
+                }
+                span {
+                    font-size: 15px;
+                    margin-right: 22px;
+                }
+            }
+        }
+        .phoneBox {
+            width: 327px;
+            i {
+                margin-right: 24px; 
+            }
+            a {
+                font-size: 15px;
+            }
+            .phoneNumberLine {
+                width: 150px;
+            }
+        }
+    }
+    .contactType {
+        padding: 20px 0;
+        width: 104px;
+        font-size: 14px;
     }
 }
 @media only screen and (min-width: 550px){
@@ -890,6 +1004,53 @@ footer {
         .aboutSectionRight {
             img {
                 height: 405px;
+            }
+        }
+    }
+    .contactInformation {
+        .emailBox {
+            width: 427px;
+            .emailContent  {
+                i {
+                    margin-right: 58px;
+                }
+                span {
+                    font-size: 18px;
+                    margin-right: 38px;
+                }
+            }
+        }
+        .phoneBox {
+            height: 123px;
+            width: 427px;
+            i {
+                margin-right: 58px; 
+            }
+            a {
+                font-size: 18px;
+            }
+            .phoneNumberLine {
+                width: 229px;
+                right: 30px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 640px){
+    .contactInformation {
+        .emailBox {
+            height: 104px;
+            width: 527px;
+            margin-right: 0px;
+            margin-bottom: 16px;
+        }
+        .phoneBox {
+            height: 123px;
+            width: 527px;
+            .phoneNumberLine {
+                width: 200px;
+                right: 28px;
             }
         }
     }
@@ -915,6 +1076,9 @@ footer {
     .aboutAsBoxBackground {
         display: block;
     }
+    footer > .container > .copyrightBox {
+        display: block;
+    }
 }
 
 @media only screen and (min-width: 928px){
@@ -923,6 +1087,35 @@ footer {
     }
     .swiperContent{
         width: 60%;
+    }
+    footer > .container > ul > li {
+        padding: 0 22px;
+    }
+    .mapSection {
+        flex-direction: row;
+        iframe {
+            width: 400px;
+            height: 390px;
+        }
+    }
+    .contactInformation {
+        .emailBox {
+            height: 104px;
+            width: 490px;
+        }
+        .phoneBox {
+            height: 104px;
+            width: 789px;
+            .phoneNumbers {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+            .phoneNumberLine {
+                width: 140px;
+                right: 20px;
+            }
+        }
     }
 }
 
@@ -958,6 +1151,13 @@ footer {
     .socialLogo {
         display: flex;
     }
+    footer > .container >  ul {
+       display: flex;
+    }
+    .smartweblogo {
+        // left: 0;
+        right: 170px;
+    }
 }
 
 @media only screen and (min-width: 1200px){
@@ -989,9 +1189,68 @@ footer {
     .liveContent  {
         margin-right: 142px; 
     }
+    footer > .container >  ul > li {
+        padding: 0 42px;
+    }
+    .contactInformation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .emailBox {
+            height: 104px;
+            width: 490px;
+            margin-right: 5px;
+            margin-bottom: 0px;
+            .emailContent {
+                i {
+                    margin-right: 20px;
+                }
+                span {
+                    font-size: 17px;
+                }
+            }
+        }
+        .phoneBox {
+            i {
+                margin-right: 20px; 
+            }
+            a {
+                font-size: 15px;
+            }
+        }
+    }
+    .mapSection {
+        iframe {
+            width: 600px;
+            height: 390px;
+        }
+    }
 }
 @media only screen and (min-width: 1560px){
     .gridBox {
         grid-template-columns: auto auto auto auto auto;
+    }
 }
+
+@media only screen and (min-width: 1617px){
+    .contactInformation {
+        .emailBox {
+            .emailContent {
+                i {
+                    margin-right: 58px;
+                }
+                span {
+                    font-size: 18px;
+                }
+            }
+        }
+        .phoneBox {
+            i {
+                margin-right: 58px; 
+            }
+            a {
+                font-size: 18px;
+            }
+        }
+    }
 }

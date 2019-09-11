@@ -42,6 +42,7 @@ $(document).ready(function(){
     $('.burger').on('click', function(){
         $(this).toggleClass("change");
         $('.openNavigationBox').toggleClass('active');
+        $('.openNavigationBox').css('width', '100%');
         $('.openNavLanguage').toggleClass('anim');
         $('.odd').toggleClass('anim');
         $('.even').toggleClass('anim');

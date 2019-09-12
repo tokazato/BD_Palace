@@ -800,7 +800,7 @@ nav > ul a:hover {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 1;
+  z-index: 4;
   overflow: hidden;
 }
 
@@ -1260,6 +1260,7 @@ footer .protectRight {
     display: none;
   }
   .smartweblogo {
+    left: 30px;
     right: 160px;
   }
   .contactInformation {
@@ -1329,6 +1330,18 @@ footer .protectRight {
     right: 20px;
     padding: 15px 0;
     font-size: 12px;
+  }
+  .mapSection div:nth-child(1) {
+    margin-right: 0px;
+  }
+  .mapSection h3 {
+    font-size: 15px;
+    margin-bottom: 0px;
+    margin-top: 30px;
+  }
+  .mapSection p {
+    font-size: 14px;
+    margin-bottom: 14px;
   }
 }
 
@@ -1497,6 +1510,17 @@ footer .protectRight {
     width: 140px;
     right: 20px;
   }
+  .mapSection div:nth-child(1) {
+    margin-right: 5px;
+  }
+  .mapSection h3 {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  .mapSection p {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
 }
 
 @media only screen and (min-width: 1124px) {
@@ -1544,7 +1568,8 @@ footer .protectRight {
     display: flex;
   }
   .smartweblogo {
-    right: 170px;
+    left: initial;
+    right: 180px;
   }
 }
 

@@ -8,6 +8,7 @@ $(document).ready(function(){
             aboutAsSlider.slideTo(index, 0);
             $('.swiperSlider').addClass("open");
             $('body').addClass('active');
+            $("#indexCounter").css("transition", "0.9s"); 
         })
     });
 
@@ -20,23 +21,24 @@ $(document).ready(function(){
     $('.swiperSlider').on('click', function(){
         $('.swiperSlider').removeClass("open");
         $('body').removeClass('active');
+        $("#indexCounter").css("transition", "0s"); 
     })
     $('.swiperContent').click(function (event){
         event.stopImmediatePropagation();
     });
 
 
-    $('.gridBox div').on('click', function(){
-        $('.swiperSlider').addClass("open");
-        $('body').addClass('active');
-    })
-    $('.swiperSlider').on('click', function(){
-        $('.swiperSlider').removeClass("open");
-        $('body').removeClass('active');
-    })
-    $('.swiperContent').click(function (event){
-        event.stopImmediatePropagation();
-    });
+    // $('.gridBox div').on('click', function(){
+    //     $('.swiperSlider').addClass("open");
+    //     $('body').addClass('active');
+    // })
+    // $('.swiperSlider').on('click', function(){
+    //     $('.swiperSlider').removeClass("open");
+    //     $('body').removeClass('active');
+    // })
+    // $('.swiperContent').click(function (event){
+    //     event.stopImmediatePropagation();
+    // });
 
 
     $('.burger').on('click', function(){
@@ -50,6 +52,7 @@ $(document).ready(function(){
         $('.navYo').toggleClass('anim');
         $('.openNavLive').toggleClass('anim');
         $('body').toggleClass('active');
+       
     })
 
 

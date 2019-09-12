@@ -91,10 +91,10 @@ nav > ul {
         color: #fff;
         padding: 15px 24px;
         transition: 0.5s ease;
-        border: 1px solid transparent;
+        border: 2px solid transparent;
         font-size: 16px;
         &:hover {
-            border: 1px solid #BEA95E;
+            border: 2px solid #BEA95E;
             transition: 0.5s ease;
         }
     }
@@ -476,6 +476,7 @@ nav > ul {
     justify-content: space-between;
     background: #fff;
     padding: 24px 32px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 .aboutSection1Content {
     display: flex;
@@ -486,7 +487,7 @@ nav > ul {
        width: 53%;
     .aboutSectionLeftTitle {
         font-size: 16px;
-        color: rgba(28, 28, 28, 0.7);
+        color: rgba(0, 0, 0, 0.7);
     }
     p {
         color: #1C1C1C;
@@ -752,7 +753,7 @@ nav > ul {
         color: #1C1C1C;
         margin-bottom: 24px;
     }
-    iframe {
+    iframe, #map, #map2 {
         border-radius: 5px;
         width: 600px;
         height: 390px;
@@ -938,9 +939,9 @@ footer {
     }
     .mapSection {
         flex-direction: column;
-        iframe {
+        iframe, #map, #map2  {
             width: 100%;
-            height: auto;
+            height: 236px;
         }
     }
     .contactType {
@@ -1109,7 +1110,7 @@ footer {
     }
     .mapSection {
         flex-direction: row;
-        iframe {
+        iframe, #map, #map2  {
             width: 400px;
             height: 390px;
         }
@@ -1250,7 +1251,7 @@ footer {
         }
     }
     .mapSection {
-        iframe {
+        iframe, #map, #map2  {
             width: 600px;
             height: 390px;
         }

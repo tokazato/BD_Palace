@@ -330,11 +330,11 @@ nav > ul a:hover {
 .openNavigationBox .openNavLanguage a {
   font-family: helvetica75;
   margin: 0 10px;
-  padding: 14px 16px 16px 16px;
+  padding: 12px 16px 12px 16px;
   border-radius: 50%;
   font-size: 13px;
-  color: rgba(184, 154, 73, 0.4);
-  border: 1px solid rgba(167, 167, 167, 0.4);
+  color: rgba(184, 154, 73, 0.6);
+  border: 1px solid rgba(167, 167, 167, 0.6);
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
@@ -1245,6 +1245,7 @@ footer .protectRight {
   }
   .aboutSection1Content .aboutSectionRight img {
     height: 202px;
+    margin-bottom: 24px;
   }
   .pageNameBox {
     text-align: center;

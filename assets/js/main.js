@@ -40,7 +40,6 @@ $(document).ready(function(){
     //     event.stopImmediatePropagation();
     // });
 
-
     $('.burger').on('click', function(){
         $(this).toggleClass("change");
         $('.openNavigationBox').toggleClass('active');
@@ -53,6 +52,17 @@ $(document).ready(function(){
         $('.openNavLive').toggleClass('anim');
         $('body').toggleClass('active');
        
+    })
+
+    $('.open-img').click(function(){
+        $('.floor-open-img-main-box').css('display', 'flex');
+        $('.floor-open-img').attr('src', this.src);
+        $('body').css("overflow", 'hidden');
+    })
+
+    $('.floor-open-box-hide').click(function(){
+        $('.floor-open-img-main-box').css('display', 'none');
+        $('body').css("overflow", 'initial');
     })
 
 })

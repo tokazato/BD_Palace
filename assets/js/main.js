@@ -65,5 +65,14 @@ $(document).ready(function(){
         $('body').css("overflow", 'initial');
     })
 
+    // $('.svg').attr('viewBox', '0 0 0 0');
+    
+    
+    if( window.matchMedia("(max-width: 1560px)").matches ){
+        $('.svg').attr('viewBox', '0 0 1920 1080');
+    } else {
+        $('.svg').attr('viewBox', ' ');
+    }
+
 })
 

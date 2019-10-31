@@ -15,7 +15,6 @@
         @content;
     }
 }
-
 @keyframes pulse {
     0% {
        transform: scale(1);
@@ -29,7 +28,6 @@
        
     }
 }
-
 @font-face {
     font-family: mtavrulibold;
     src: url(../fonts/TBCDinMtavruli_bold.ttf)
@@ -39,7 +37,7 @@
     src: url(../fonts/TBCDinMtavruli.ttf)
 }
 @font-face {
-    font-family: helvetica45;
+    font-family:   45;
     src: url(../fonts/Linotype-Helvetica-Neue-World-45Lt.ttf)
 }
 @font-face {
@@ -150,6 +148,9 @@ nav > ul {
         }
     }
 }
+.live-link-box {
+    display: none;
+}
 .liveBox {
     p {
         font-size: 15px;
@@ -252,9 +253,9 @@ nav > ul {
 }
 
 .hand-box {
-    height: 60px;
-    width: 60px;
-    background: rgba(26, 26, 26, 0.6);
+    height: 55px;
+    width: 55px;
+    background: rgba(26, 26, 26, 0.3);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -982,7 +983,7 @@ footer {
 }
 .floor-section-1-left-box-h1 {
     font-size: 24px;
-    font-family: helveticabold;
+    font-family: helvetica75;
     color: #1C1C1C;
     text-align: center;
     border: 1px solid #DEDEDE;
@@ -1032,7 +1033,7 @@ footer {
     margin-bottom: 46px;
     text-align: center;
     font-size: 18px;
-    font-family: helveticabold;
+    font-family: helvetica75;
     color: #1C1C1C;
     padding-top: 20px;
 }
@@ -1049,7 +1050,7 @@ footer {
 }
 .floor-section-2-bottom-h2 {
     font-size: 18px;
-    font-family: helveticabold;
+    font-family: helvetica75;
     color: #9A803B;
     border: 1px solid #B89A49;
     border-radius: 30px;
@@ -1100,12 +1101,12 @@ footer {
 }
 .floor-section-2-block-img-id {
     font-size: 18px;
-    font-family: helveticabold;
+    font-family: helvetica75;
     color: rgba(28, 28, 28, 0.7);
 }
 .floor-section-2-block-img-number {
     font-size: 48px;
-    font-family: helveticabold;
+    font-family: helvetica75;
     color: rgba(28, 28, 28, 0.7);
 }
 .floor-section-2-block-text-box {
@@ -1123,7 +1124,7 @@ footer {
         text-align: center;
         :nth-child(1){
             font-size: 12px;
-            font-family: helveticabold;
+            font-family: helvetica75;
             color: #1C1C1C;
         }
         :nth-child(2){
@@ -1233,6 +1234,10 @@ footer {
     .smartweblogo {
         left: 30px;
         bottom: 28px;
+        img {
+            width: 100px;
+            height: 32px;
+        }
     }
     .contactInformation {
         display: flex;
@@ -1378,6 +1383,12 @@ footer {
     }
     .svg {
         width: initial;
+    }
+    .messenger {
+        img {
+            width: 90px;
+            height: 90px;
+        }
     }
 }
 
@@ -1557,7 +1568,7 @@ footer {
         }
     }
     .pageNameBox {
-        text-align: left;
+        // text-align: left;
         h1 {
         font-size: 38px;
         }
@@ -1678,6 +1689,10 @@ footer {
     .smartweblogo {
         left: 57px;
         bottom: 45px;
+        img {
+            width: 132px;
+            height: 39px;
+        }
     }
     .floor-section-1 {
         display: flex;
@@ -1690,6 +1705,12 @@ footer {
     .floor-section-1-right-box {
         width: 42%;
     }
+    // .messenger {
+    //     img {
+    //         width: 90px;
+    //         height: 90px;
+    //     }
+    // }
 }
 
 @media only screen and (min-width: 1200px){

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+    
     let elements = $('.gridBox div');
 
     $.each(elements, function( index, element ) {
@@ -65,13 +65,30 @@ $(document).ready(function(){
         $('body').css("overflow", 'initial');
     })
 
-    // $('.svg').attr('viewBox', '0 0 0 0');
     
     
     if( window.matchMedia("(max-width: 1560px)").matches ){
         $('.svg').attr('viewBox', '0 0 1920 1080');
     } else {
-        $('.svg').attr('viewBox', ' ');
+        $('.svg').attr('viewBox', null);
+    }
+
+    if( $('.live-link-box').attr('href') ){
+        $('.live-link-box').css('display', 'flex')
+    } else {
+        $('.live-link-box').css('display', 'none')
+    }
+
+    var sliderLength = $('.swiper-slide')
+    if(sliderLength.length < 10){
+        $('.numberOfPicture').text('/ 0'+sliderLength.length)
+    } else {
+        $('.numberOfPicture').text('/ '+sliderLength.length)
+    }
+
+    for(let i = 1; i <= sliderLength.length; i++ ){
+        var li = $(`<li>${i < 10 ? '0'+i : i }</li>`)
+        $('#indexCounter').append(li)
     }
 
 })

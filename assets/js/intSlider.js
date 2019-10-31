@@ -3,6 +3,9 @@ var aboutAsSlider = new Swiper('.aboutAsSlider', {
       nextEl: '.goRight',
       prevEl: '.goLeft',
     },
+    keyboard: {
+      enabled: true,
+    },
     speed: 800,
     spaceBetween: 20,
     loops: true,

@@ -1,5 +1,7 @@
 $(document).ready(function(){
-    
+// ------------ start jquery
+
+// ------------ open slider same on elements 
     let elements = $('.gridBox div');
 
     $.each(elements, function( index, element ) {
@@ -12,14 +14,7 @@ $(document).ready(function(){
         })
     });
 
-   
-
-
-    // $('.gridBox div').on('click', function(){
-    //     $('.swiperSlider').addClass("open");
-    //     $('body').addClass('active');
-    // })
-
+// -------------- close slider 
     $('.swiperSlider').on('click', function(){
         $('.swiperSlider').removeClass("open");
         $('body').removeClass('active');
@@ -42,6 +37,8 @@ $(document).ready(function(){
     //     event.stopImmediatePropagation();
     // });
 
+
+// ---------------- open menu with burger
     $('.burger').on('click', function(){
         $(this).toggleClass("change");
         $('.openNavigationBox').toggleClass('active');
@@ -56,18 +53,22 @@ $(document).ready(function(){
        
     })
 
+
+// ---------------  floor page: open img
     $('.open-img').click(function(){
         $('.floor-open-img-main-box').css('display', 'flex');
         $('.floor-open-img').attr('src', this.src);
         $('body').css("overflow", 'hidden');
     })
 
+// ----------------  floor page: close img
     $('.floor-open-box-hide').click(function(){
         $('.floor-open-img-main-box').css('display', 'none');
         $('body').css("overflow", 'initial');
     })
 
     
+// ------------- responsive main page svg 
     rs()
     $( window ).resize(function() {
         rs()
@@ -80,30 +81,36 @@ $(document).ready(function(){
         }
     }
    
-
+// --------------- main page: live hide and show
     if( $('.live-link-box').attr('href') ){
         $('.live-link-box').css('display', 'flex')
     } else {
         $('.live-link-box').css('display', 'none')
     }
 
+// ------------- slider counter and  add 0
     var sliderLength = $('.swiper-slide')
     if(sliderLength.length < 10){
         $('.numberOfPicture').text('/ 0'+sliderLength.length)
     } else {
         $('.numberOfPicture').text('/ '+sliderLength.length)
     }
-
     for(let i = 1; i <= sliderLength.length; i++ ){
         var li = $(`<li>${i < 10 ? '0'+i : i }</li>`)
         $('#indexCounter').append(li)
     }
 
+
+
+// ------------------ floor page: sold section
     // if( $('.sold-flat-box-active').css('display') == 'none' ){
     //     $('.floor-section-2-block-search').css('display', 'flex')
     // } else {
     //     $('.floor-section-2-block-search').css('display', 'none')
     // }
 
+
+
+// ---------------- end jquery
 })
 

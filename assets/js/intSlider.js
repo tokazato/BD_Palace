@@ -19,7 +19,7 @@ var aboutAsSlider = new Swiper('.aboutAsSlider', {
   });
 
 
-
+// ----------- responsive ios and others
   var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
   aboutAsSlider.on('slideChange', function() {
     if(iOS){

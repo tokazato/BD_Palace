@@ -39,7 +39,7 @@
 }
 
 @font-face {
-  font-family: 45;
+  font-family: helvetica45;
   src: url(../fonts/Linotype-Helvetica-Neue-World-45Lt.ttf);
 }
 
@@ -207,8 +207,8 @@ nav > ul a:hover {
   transition: 0.5s ease;
 }
 
-.live-link-box {
-  display: none;
+nav > ul .active {
+  border: 2px solid #BEA95E;
 }
 
 .liveBox p {
@@ -770,6 +770,63 @@ polygon {
   }
 }
 
+.live-stream-main-box {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+  z-index: 9;
+}
+
+.live-stream-main-box-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.live-stream-content-box {
+  width: 60vw;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.stream-h1 {
+  color: #fff;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 32px;
+  font-size: 20px;
+  font-family: mtavrulibold;
+}
+
+.stream-live {
+  color: #FF6464;
+}
+
 .header {
   background: #282829;
   margin-bottom: 57px;
@@ -1030,6 +1087,28 @@ polygon {
   visibility: visible;
 }
 
+.swiper-container {
+  height: 271px;
+}
+
+@media screen and (min-width: 550px) {
+  .swiper-container {
+    height: 471px;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .swiper-container {
+    height: 671px;
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  .swiper-container {
+    height: 753px;
+  }
+}
+
 .swiperContent {
   padding: 0;
   margin: 0;
@@ -1058,6 +1137,10 @@ polygon {
 
 .swiperContent img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
 }
 
 .swiperContent .sliderArrowBox {
@@ -1407,7 +1490,7 @@ footer .protectRight {
   margin-top: 50px;
 }
 
-.pagenation span {
+.pagenation a, .pagenation span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1429,7 +1512,7 @@ footer .protectRight {
   cursor: pointer;
 }
 
-.pagenation span:hover {
+.pagenation a:hover, .pagenation span:hover {
   background: #1C1C1C;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;

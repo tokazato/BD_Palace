@@ -37,7 +37,7 @@
     src: url(../fonts/TBCDinMtavruli.ttf)
 }
 @font-face {
-    font-family:   45;
+    font-family: helvetica45;
     src: url(../fonts/Linotype-Helvetica-Neue-World-45Lt.ttf)
 }
 @font-face {
@@ -148,9 +148,9 @@ nav > ul {
             transition: 0.5s ease;
         }
     }
-}
-.live-link-box {
-    display: none;
+    .active {
+        border: 2px solid #BEA95E;
+    }
 }
 .liveBox {
     p {
@@ -546,6 +546,44 @@ polygon {
     }
 }
 
+// ----- live stream
+.live-stream-main-box {
+    position: absolute; 
+    height: 100vh; 
+    width: 100%; 
+    top: 0; 
+    left: 0; 
+    background: rgba(0, 0, 0, 0.9); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    display: none;
+    z-index: 9;
+}
+.live-stream-main-box-active {
+    display: flex;
+}
+.live-stream-content-box {
+    width: 60vw; 
+    height: 80vh; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+.stream-h1 {
+    color: #fff;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 32px; 
+    font-size: 20px;
+    font-family: mtavrulibold;
+}
+.stream-live {
+    color: #FF6464;
+}
+
+
 
 
 // --------- AboutAs --------- 
@@ -732,6 +770,18 @@ polygon {
 .swiperSlider.open {
     visibility: visible;
 }
+.swiper-container {
+    height: 271px;
+    @include responsive(550px){
+        height: 471px;
+    }
+    @include responsive(1150px){
+        height: 671px;
+    }
+    @include responsive(1450px){
+        height: 753px;
+    }
+}
 .swiperContent{
     @include container();
     text-align: center;
@@ -748,9 +798,11 @@ polygon {
         height: initial;
         overflow-y: initial;
     }
-    
     img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
     }
     .sliderArrowBox {
         position: relative;
@@ -970,7 +1022,7 @@ footer {
     align-items: center;
     width: 100%;
     margin-top: 50px;
-    span {
+    a, span {
         display: flex;
         justify-content: center;
         align-items: center;

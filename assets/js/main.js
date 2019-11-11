@@ -82,11 +82,11 @@ $(document).ready(function(){
     }
    
 // --------------- main page: live hide and show
-    if( $('.live-link-box').attr('href') ){
-        $('.live-link-box').css('display', 'flex')
-    } else {
-        $('.live-link-box').css('display', 'none')
-    }
+    // if( $('.live-link-box').attr('href') ){
+    //     $('.live-link-box').css('display', 'flex')
+    // } else {
+    //     $('.live-link-box').css('display', 'none')
+    // }
 
 // ------------- slider counter and  add 0
     var sliderLength = $('.swiper-slide')
@@ -109,8 +109,17 @@ $(document).ready(function(){
     //     $('.floor-section-2-block-search').css('display', 'none')
     // }
 
+// ------------ open live stream popup
+    $('.live-link-box').on('click', function(){
+        $('.live-stream-main-box').addClass('live-stream-main-box-active');
+    })
+    $('.live-stream-main-box').on('click', function(){
+        $('.live-stream-main-box').removeClass('live-stream-main-box-active');
+        $('#popup-youtube-player')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');  
+    })
 
 
-// ---------------- end jquery
-})
+
+    
+}) // ---------------- end jquery
 

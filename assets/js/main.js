@@ -19,7 +19,7 @@ $(document).ready(function(){
         $('.swiperSlider').removeClass("open");
         $('body').removeClass('active');
         $("#indexCounter").css("transition", "0s"); 
-    })
+    });
     $('.swiperContent').click(function (event){
         event.stopImmediatePropagation();
     });
@@ -50,13 +50,13 @@ $(document).ready(function(){
         $('.navYo').toggleClass('anim');
         $('.openNavLive').toggleClass('anim');
         $('body').toggleClass('active');
-       
-    })
+    });
 
-
+	
 // ---------------  floor page: open img
     $('.open-img').click(function(){
         $('.floor-open-img-main-box').css('display', 'flex');
+        $('.zoomImg').attr('src', this.src);
         $('.floor-open-img').attr('src', this.src);
         $('body').css("overflow", 'hidden');
     })
@@ -112,14 +112,24 @@ $(document).ready(function(){
 // ------------ open live stream popup
     $('.live-link-box').on('click', function(){
         $('.live-stream-main-box').addClass('live-stream-main-box-active');
-    })
+    });
     $('.live-stream-main-box').on('click', function(){
         $('.live-stream-main-box').removeClass('live-stream-main-box-active');
         $('#popup-youtube-player')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');  
-    })
-
+    });
 
 
     
+    // ---------- add Zoom for images
+    function removeZoom(){
+        if(window.matchMedia("(min-width: 1025px)").matches){
+            wheelzoom(document.querySelector('img.zoom'));
+        }
+    }
+    removeZoom()
+   
+    
 }) // ---------------- end jquery
+
+
 
